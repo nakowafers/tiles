@@ -9,7 +9,7 @@ function drop_handler(ev) {
     ev.preventDefault();
     const data = ev.dataTransfer.getData("text/plain");
     let nodeCopy = document.getElementById(data).cloneNode(true);
-    nodeCopy.id = Math.random().toString().substr(2, 9);
+    nodeCopy.id = Math.random().toString().substring(2, 9);
     nodeCopy.classList.add('cloned');
     nodeCopy.addEventListener('dblclick', function (e) {
         nodeCopy.remove();
@@ -29,6 +29,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     elements.forEach(function (tile) {
         tile.addEventListener("dragstart", dragstart_handler);
+        tile.addEventListener("dragenter", function (event) {
+            // highlight potential drop target when the draggable element enters it
+            if (event.target.className == "dropzone") {
+                event.target.style.background = "purple";
+            }
+
+        }, false);
     });
 });
 
