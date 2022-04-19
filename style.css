@@ -3,12 +3,11 @@ html {
   font-family: sans-serif;
 }
 
-@media (min-width: 720px) {
-  body {
-    margin-left: 10%;
-    width: 95%;
-    margin: 10px auto;
-  }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
 }
 
 h1 {
@@ -53,9 +52,9 @@ button:hover {
 }
 
 .drag-area {
-  min-height: 240px;
+  min-height: 220px;
   background-color: #ccc;
-  margin: 10px 0px;
+  margin: 20px 0px;
   align-items: center;
   justify-content: center;
   box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.4);
@@ -72,21 +71,22 @@ button:hover {
   box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.4);
   border-radius: 2px;
   max-width: 1020px;
-  margin: 0 auto;
+  min-height: 630px;
+  flex-basis: 100%;
 }
 
 .tiles {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   font-family: serif;
   border-radius: 5%;
   box-shadow: 2px 1px 3px 0 rgba(0, 0, 0, 0.4);
   display: flex;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 700;
   justify-content: center;
   align-items: center;
-  margin: 10px 5px;
+  margin: 5px 5px;
 }
 
 .all_tiles {
