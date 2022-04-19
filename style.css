@@ -1,6 +1,7 @@
 html {
   background-color: #82bfe8;
   font-family: sans-serif;
+  transition: ease-in-out 0.5s;
 }
 
 body {

@@ -58,14 +58,14 @@ levelSelector.addEventListener('change', (ev) => {
 
     if (level == 1) {
         tiles_1.forEach(function (tile) {
-            console.log("hey");
             tile.style.display = "flex";
         })
+        document.querySelector("html").style.backgroundColor = "#D1907B"
     } else {
         tiles_1.forEach(function (tile) {
-            console.log("hey");
             tile.style.display = "none";
         })
+        document.querySelector("html").style.backgroundColor = "#82bfe8"
     }
 
 
