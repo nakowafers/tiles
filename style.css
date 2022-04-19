@@ -112,9 +112,8 @@ button:hover {
   background-color: #c1d8ac;
 }
 
-.hidden {
-  background-color: none;
-  box-shadow: none;
+.level_1 {
+  display: none;
 }
 
 .level_1_1 {
