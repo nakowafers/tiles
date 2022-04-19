@@ -10,53 +10,86 @@
 </head>
 
 <body class="flex-body">
-    <header>
-        <h1 class="logo">Letter Tiles</h1>
-        <button id="reset-button" class="reset">Reset</button>
-    </header>
-    <div id="target" class="drag-area flex-container" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
+    <div class="board">
+        <header>
+            <h1 class="logo">Letter Tiles</h1>
+            <div class="right">
+                <select name="grade" id="" class="grade" hidden>
+                    <option value="K">Level K</option>
+                    <option value="1">Level 1</option>
+                </select>
+                <button id="reset-button" class="reset">Reset</button>
+            </div>
+
+        </header>
+        <div id="target" class="drag-area flex-container" ondrop="drop_handler(event)"
+            ondragover="dragover_handler(event)">
+        </div>
+        <div class="all_tiles">
+            <div class="level_k">
+                <div class="flex-container level_k">
+                    <div id="a" class="vowels tiles" draggable="true">a</div>
+                    <div id="b" class="consonants tiles" draggable="true">b</div>
+                    <div id="c" class="consonants tiles" draggable="true">c</div>
+                    <div id="d" class="consonants tiles" draggable="true">d</div>
+                    <div id="e" class="vowels tiles" draggable="true">e</div>
+                    <div id="f" class="consonants tiles" draggable="true">f</div>
+                </div>
+                <div class="flex-container level_k">
+                    <div id="g" class="consonants tiles" draggable="true">g</div>
+                    <div id="h" class="consonants tiles" draggable="true">h</div>
+                    <div id="i" class="vowels tiles" draggable="true">i</div>
+                    <div id="j" class="consonants tiles" draggable="true">j</div>
+                    <div id="k" class="consonants tiles" draggable="true">k</div>
+                    <div id="l" class="consonants tiles" draggable="true">l</div>
+                </div>
+                <div class="flex-container level_k">
+                    <div id="m" class="consonants tiles" draggable="true">m</div>
+                    <div id="n" class="consonants tiles" draggable="true">n</div>
+                    <div id="o" class="vowels tiles" draggable="true">o</div>
+                    <div id="p" class="consonants tiles" draggable="true">p</div>
+                    <div id="qu" class="consonants tiles" draggable="true">qu</div>
+                    <div id="r" class="consonants tiles" draggable="true">r</div>
+                    <div id="s" class="consonants tiles" draggable="true">s</div>
+
+                </div>
+                <div class="flex-container level_k">
+                    <div id="t" class="consonants tiles" draggable="true">t</div>
+                    <div id="v" class="consonants tiles" draggable="true">v</div>
+                    <div id="u" class="vowels tiles" draggable="true">u</div>
+                    <div id="w" class="consonants tiles" draggable="true">w</div>
+                    <div id="x" class="consonants tiles" draggable="true">x</div>
+                    <div id="y" class="consonants tiles" draggable="true">y</div>
+                    <div id="z" class="consonants tiles" draggable="true">z</div>
+
+                </div>
+                <div class="flex-container level_k">
+                    <div id="wh" class="consonants tiles" draggable="true">wh</div>
+                    <div id="ch" class="consonants tiles" draggable="true">ch</div>
+                    <div id="sh" class="consonants tiles" draggable="true">sh</div>
+                    <div id="th" class="consonants tiles" draggable="true">th</div>
+                    <div id="ck" class="consonants tiles" draggable="true">ck</div>
+
+                </div>
+                <div class="flex-container level_1 level_1_2">
+                    <div id="all" class="glued tiles" draggable="true">all</div>
+                    <div id="am" class="glued tiles" draggable="true">am</div>
+                    <div id="an" class="glued tiles" draggable="true">an</div>
+                </div>
+            </div>
+            <div class="flex-container level_1 level_1_1">
+                <div id="ang" class="glued tiles" draggable="true">ang</div>
+                <div id="ank" class="glued tiles" draggable="true">ank</div>
+                <div id="ing" class="glued tiles" draggable="true">ing</div>
+                <div id="ink" class="glued tiles" draggable="true">ink</div>
+                <div id="ong" class="glued tiles" draggable="true">ong</div>
+                <div id="onk" class="glued tiles" draggable="true">onk</div>
+                <div id="ung" class="glued tiles" draggable="true">ung</div>
+                <div id="ung" class="glued tiles" draggable="true">unk</div>
+            </div>
+        </div>
     </div>
-    <div class="flex-container">
-        <div id="a" class="vowels tiles" draggable="true">a</div>
-        <div id="b" class="consonants tiles" draggable="true">b</div>
-        <div id="c" class="consonants tiles" draggable="true">c</div>
-        <div id="d" class="consonants tiles" draggable="true">d</div>
-        <div id="e" class="vowels tiles" draggable="true">e</div>
-        <div id="f" class="consonants tiles" draggable="true">f</div>
-    </div>
-    <div class="flex-container">
-        <div id="g" class="consonants tiles" draggable="true">g</div>
-        <div id="h" class="consonants tiles" draggable="true">h</div>
-        <div id="i" class="vowels tiles" draggable="true">i</div>
-        <div id="j" class="consonants tiles" draggable="true">j</div>
-        <div id="k" class="consonants tiles" draggable="true">k</div>
-        <div id="l" class="consonants tiles" draggable="true">l</div>
-    </div>
-    <div class="flex-container">
-        <div id="m" class="consonants tiles" draggable="true">m</div>
-        <div id="n" class="consonants tiles" draggable="true">n</div>
-        <div id="o" class="vowels tiles" draggable="true">o</div>
-        <div id="p" class="consonants tiles" draggable="true">p</div>
-        <div id="qu" class="consonants tiles" draggable="true">qu</div>
-        <div id="r" class="consonants tiles" draggable="true">r</div>
-        <div id="s" class="consonants tiles" draggable="true">s</div>
-    </div>
-    <div class="flex-container">
-        <div id="t" class="consonants tiles" draggable="true">t</div>
-        <div id="v" class="consonants tiles" draggable="true">v</div>
-        <div id="u" class="vowels tiles" draggable="true">u</div>
-        <div id="w" class="consonants tiles" draggable="true">w</div>
-        <div id="x" class="consonants tiles" draggable="true">x</div>
-        <div id="y" class="consonants tiles" draggable="true">y</div>
-        <div id="z" class="consonants tiles" draggable="true">z</div>
-    </div>
-    <div class="flex-container">
-        <div id="wh" class="consonants tiles" draggable="true">wh</div>
-        <div id="ch" class="consonants tiles" draggable="true">ch</div>
-        <div id="sh" class="consonants tiles" draggable="true">sh</div>
-        <div id="th" class="consonants tiles" draggable="true">th</div>
-        <div id="ck" class="consonants tiles" draggable="true">ck</div>
-    </div>
+
 </body>
 <script src="app.js"></script>
 

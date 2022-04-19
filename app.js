@@ -50,4 +50,12 @@ btn_reset.addEventListener('click', function () {
 
 });
 
+let levelSelector = document.querySelector(".grade");
+
+levelSelector.addEventListener('change', () => {
+    let level = levelSelector.value;
+    console.log(level);
+})
+
+
 
