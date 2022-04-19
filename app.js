@@ -52,9 +52,25 @@ btn_reset.addEventListener('click', function () {
 
 let levelSelector = document.querySelector(".grade");
 
-levelSelector.addEventListener('change', () => {
+levelSelector.addEventListener('change', (ev) => {
     let level = levelSelector.value;
-    console.log(level);
+    let tiles_1 = document.querySelectorAll(".level_1")
+
+    if (level == 1) {
+        tiles_1.forEach(function (tile) {
+            console.log("hey");
+            tile.style.display = "flex";
+        })
+    } else {
+        tiles_1.forEach(function (tile) {
+            console.log("hey");
+            tile.style.display = "none";
+        })
+    }
+
+
+
+    console.log(level == 1);
 })
 
 
