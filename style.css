@@ -113,6 +113,16 @@ button:hover {
   background-color: #c1d8ac;
 }
 
+.suffix {
+  background-color: #f6f053;
+  width: 75px;
+  font-family: "wmanuscript", sans-serif;
+}
+
+.cloned.suffix {
+  width: 165px;
+}
+
 .level_1 {
   display: none;
 }
