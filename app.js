@@ -25,6 +25,9 @@ function drop_handler(ev) {
         // let CopyTo = to.cloneNode(true);
         let CopyFrom = from.cloneNode(true);
         CopyFrom.classList.add('cloned');
+        CopyFrom.addEventListener('dblclick', function (e) {
+            CopyFrom.remove();
+        });
         to.parentNode.replaceChild(CopyFrom, to);
     }
 
