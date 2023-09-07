@@ -1,11 +1,15 @@
+var from;
+
 function dragstart_handler(ev) {
     // Add the target element's id to the data transfer object
+    from = ev.target;
     ev.dataTransfer.setData("text/plain", ev.target.id);
 }
 function dragover_handler(ev) {
     ev.preventDefault();
 }
 function drop_handler(ev) {
+    let to = ev.target;
     ev.preventDefault();
     const data = ev.dataTransfer.getData("text/plain");
     let nodeCopy = document.getElementById(data).cloneNode(true);
@@ -15,8 +19,13 @@ function drop_handler(ev) {
         nodeCopy.remove();
     });
 
-    if (ev.target.id == "target") {
+    if (to.id == "target") {
         ev.target.appendChild(nodeCopy);
+    } else {
+        // let CopyTo = to.cloneNode(true);
+        let CopyFrom = from.cloneNode(true);
+        CopyFrom.classList.add('cloned');
+        to.parentNode.replaceChild(CopyFrom, to);
     }
 
     ev.dataTransfer.clearData();
